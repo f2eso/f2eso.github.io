@@ -1,4 +1,4 @@
-title: 面试大学
+title: 前端工程师标准化
 description:
 keywords:
 tagline:
@@ -104,7 +104,7 @@ jekyll-archives:
 # Jekyll Feed
 feed:
   path: atom.xml
-name: 面试大学
+name: 前端工程师标准化
 author:
   name: 欧雷
   email: ourairyu@gmail.com

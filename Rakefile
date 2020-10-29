@@ -21,7 +21,7 @@ task :deploy do
 
     cd dir do
       system "git init"
-      system "git remote add origin https://github.com/f2eso/interview.git"
+      system "git remote add origin https://github.com/f2eso/f2eso.github.io.git"
       system "git fetch"
       system "git checkout gh-pages"
     end
@@ -40,7 +40,7 @@ task :deploy do
 
     system "touch .nojekyll"
     system "touch CNAME"
-    system "echo interview.ourai.ws > CNAME"
+    system "echo fes.ourai.ws > CNAME"
     system "git add -A"
     system "git commit -m 'build: generate on #{current_time}'"
     system "git push origin gh-pages"
