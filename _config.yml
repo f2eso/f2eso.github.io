@@ -7,6 +7,9 @@ collections:
   pages:
     output: true
     permalink: /:path/
+  interview:
+    output: true
+    permalink: /:collection/:path/
 
 # Handling Reading
 exclude:
@@ -78,6 +81,12 @@ defaults:
         slug: ourai
         twitter: ourairyu
       siblings: true
+  - scope:
+      path: ""
+      type: interview
+    values:
+      layout: page
+      comments: true
 
 
 

@@ -1,0 +1,3 @@
+[submodule "interview"]
+	path = vendors/interview
+	url = https://github.com/f2eso/interview.git

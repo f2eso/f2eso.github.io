@@ -5,6 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "build:q": "node build/index.js question",
+    "build": "node build/index.js",
     "clean": "rm -rf .asset-cache",
     "serve": "rake run",
     "predeploy": "npm run clean",
