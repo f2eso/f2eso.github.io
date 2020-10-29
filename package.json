@@ -1,0 +1,29 @@
+{
+  "name": "f2eso-interview",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf .asset-cache",
+    "serve": "rake run",
+    "predeploy": "npm run clean",
+    "deploy": "rake deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:f2eso/interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f2eso/interview/issues"
+  },
+  "homepage": "https://github.com/f2eso/interview#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "handie": "^1.0.8",
+    "js-yaml": "^3.14.0"
+  }
+}
