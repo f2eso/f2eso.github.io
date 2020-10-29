@@ -5,8 +5,9 @@ const yaml = require('js-yaml');
 
 const { convertYamlToJson } = require('../helper');
 
-const QUESTION_DATA_ROOT = path.resolve(__dirname, '../../vendors/interview/data/questions');
+const QUESTION_LOCAL_DATA = path.resolve(__dirname, '../../_data/interview/questions.yml');
 const QUESTION_DOC_ROOT = path.resolve(__dirname, '../../_interview/questions');
+const QUESTION_DATA_ROOT = path.resolve(__dirname, '../../vendors/interview/data/questions');
 
 function scanAndSortByAsc(filePath) {
   return fs.readdirSync(filePath).slice();
@@ -24,24 +25,25 @@ function generateMergedQuestions() {
       }
 
       const dataPath = [QUESTION_DATA_ROOT, category, questionTitle].join('/');
-      // const data = convertYamlToJson(`${dataPath}/metadata.yml`);
+      const data = convertYamlToJson(`${dataPath}/metadata.yml`);
       const frontMatterContent = fs.readFileSync(`${dataPath}/metadata.yml`).toString();
       const docContent = fs.readFileSync(`${dataPath}/readme.md`).toString();
       const filePath = `${QUESTION_DOC_ROOT}/${questionTitle}.md`;
 
       fs.writeFileSync(filePath, `---\n${frontMatterContent.endsWith('\n') ? frontMatterContent.slice(0, -1) : frontMatterContent}\n---\n\n${docContent}`);
 
-      // doc[anime] = data;
+      doc[questionTitle] = {
+        ...data,
+        categories: [category],
+      };
     });
   });
 
-  // const distFilePath = `${LOCAL_DATA_ROOT}/all.yml`;
+  if (!fs.existsSync(QUESTION_LOCAL_DATA)) {
+    execSync(`touch ${QUESTION_LOCAL_DATA}`);
+  }
 
-  // if (!fs.existsSync(distFilePath)) {
-  //   execSync(`touch ${distFilePath}`);
-  // }
-
-  // fs.writeFileSync(distFilePath, yaml.safeDump(doc));
+  fs.writeFileSync(QUESTION_LOCAL_DATA, yaml.safeDump(doc));
 }
 
 module.exports = {

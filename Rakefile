@@ -10,7 +10,7 @@ end
 
 desc "部署"
 task :deploy do
-  dir = "../.tmp/oss"
+  dir = "../.tmp/fes"
 
   unless FileTest.directory?("../.tmp")
     system "mkdir ../.tmp"
@@ -21,7 +21,7 @@ task :deploy do
 
     cd dir do
       system "git init"
-      system "git remote add origin https://github.com/f2eso/f2eso.github.io.git"
+      system "git remote add origin https://github.com/f2eso/fes.git"
       system "git fetch"
       system "git checkout gh-pages"
     end

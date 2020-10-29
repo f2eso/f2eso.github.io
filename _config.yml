@@ -1,4 +1,4 @@
-title: 前端工程师标准化
+title: FES
 description:
 keywords:
 tagline:
@@ -113,7 +113,7 @@ jekyll-archives:
 # Jekyll Feed
 feed:
   path: atom.xml
-name: 前端工程师标准化
+name: FES
 author:
   name: 欧雷
   email: ourairyu@gmail.com

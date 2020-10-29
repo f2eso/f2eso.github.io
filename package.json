@@ -1,5 +1,5 @@
 {
-  "name": "f2eso",
+  "name": "fes",
   "version": "0.0.0",
   "description": "",
   "private": true,
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:f2eso/f2eso.github.io.git"
+    "url": "git+ssh://git@github.com:f2eso/fes.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/f2eso/f2eso.github.io/issues"
+    "url": "https://github.com/f2eso/fes/issues"
   },
-  "homepage": "https://github.com/f2eso/f2eso.github.io#readme",
+  "homepage": "https://github.com/f2eso/fes#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "handie": "^1.0.8",

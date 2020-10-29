@@ -3,4 +3,14 @@ title: 面试题集
 permalink: /interview/questions/index.html
 ---
 
-questions
+{% contentfor footer %}
+  {% include widgets/social.html %}
+  {% include widgets/toc.html %}
+{% endcontentfor %}
+
+<ul>
+  {% for question in site.data.interview.questions %}
+    {% assign q = question[1] %}
+    <li><a href="/interview/questions/{{ question[0] }}/">{{ q.title }}</a></li>
+  {% endfor %}
+</ul>
