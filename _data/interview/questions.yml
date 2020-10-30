@@ -4,6 +4,7 @@ semantic-html:
   tags:
     - html
   date: 2020-10-29T08:30:18.000Z
+  answered: true
   subjects:
     - web-design
 reflow-and-repaint:
@@ -60,6 +61,7 @@ search-engine-optimization:
   tags:
     - html
   date: 2020-10-30T04:27:18.000Z
+  answered: true
   subjects:
     - web-design
 defer-and-async-attributes-of-script-tag:
@@ -68,6 +70,7 @@ defer-and-async-attributes-of-script-tag:
   tags:
     - html
   date: 2020-10-30T04:30:00.000Z
+  answered: true
   subjects:
     - web-design
 box-model:

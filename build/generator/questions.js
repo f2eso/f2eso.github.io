@@ -34,10 +34,12 @@ function generateMergedQuestions() {
 
       if (fs.existsSync(`${dataPath}/answer.md`)) {
         docContent += `\n\n## 回答\n\n${fs.readFileSync(`${dataPath}/answer.md`).toString()}`;
+        data.answered = true;
       }
 
       if (fs.existsSync(`${dataPath}/explain.md`)) {
         docContent += `\n\n## 讲解\n\n${fs.readFileSync(`${dataPath}/explain.md`).toString()}`;
+        data.explained = true;
       }
 
       fs.writeFileSync(filePath, `---\n${frontMatterContent.endsWith('\n') ? frontMatterContent.slice(0, -1) : frontMatterContent}\n---\n\n${docContent}`);

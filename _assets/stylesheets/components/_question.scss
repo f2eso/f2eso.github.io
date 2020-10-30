@@ -17,12 +17,39 @@
   }
 }
 
+.QuestionTag {
+  padding: 3px 5px;
+  font: {
+    size: 12px;
+    weight: 400;
+  }
+  color: #fff;
+  border-radius: 3px;
+
+  &--unanswered {
+    background-color: #f50;
+  }
+}
+
+.QuestionTag + .QuestionTag {
+  margin-left: 5px;
+}
+
 .InterviewQuestion {
   padding: 12px 0;
 
   &-title {
     margin: 0;
     font-size: 1.2em !important;
+
+    a,
+    span {
+      @include inline-block;
+    }
+
+    span + a {
+      margin-left: 5px;
+    }
   }
 
   &-footer {
