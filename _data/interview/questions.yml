@@ -4,7 +4,7 @@ reflow-and-repaint:
   tags:
     - css
   date: '2020-10-29 16:30:18 +0800'
-  categories:
+  subjects:
     - browser
 single-page-application:
   title: 聊聊你对「单页面应用」的理解
@@ -12,7 +12,7 @@ single-page-application:
   tags:
     - javascript
   date: '2020-10-29 16:30:18 +0800'
-  categories:
+  subjects:
     - engineering
 data-binding-in-vue:
   title: 说说 Vue 中数据绑定的特点及实现方式
@@ -21,7 +21,7 @@ data-binding-in-vue:
     - javascript
     - vue
   date: '2020-10-29 16:30:18 +0800'
-  categories:
+  subjects:
     - framework
 lexical-closure:
   title: 谈谈你对「闭包」的理解
@@ -29,14 +29,14 @@ lexical-closure:
   tags:
     - javascript
   date: '2020-10-29 16:30:18 +0800'
-  categories:
+  subjects:
     - programming
 cross-site-scripting:
   title: 如何防范「跨站脚本（XSS）」攻击？
   description: 「跨站脚本（XSS）」有几种？如何防范？
   tags: null
   date: '2020-10-29 16:30:18 +0800'
-  categories:
+  subjects:
     - security
 absolute-centering:
   title: 在 CSS 中如何实现绝对居中？
@@ -44,7 +44,7 @@ absolute-centering:
   tags:
     - css
   date: '2020-10-29 16:30:18 +0800'
-  categories:
+  subjects:
     - web-design
 semantic-html:
   title: 如何编写有语义的页面？
@@ -52,5 +52,5 @@ semantic-html:
   tags:
     - html
   date: '2020-10-29 16:30:18 +0800'
-  categories:
+  subjects:
     - web-design

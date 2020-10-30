@@ -1,0 +1,14 @@
+html:
+  title: HTML
+
+css:
+  title: CSS
+
+javascript:
+  title: JavaScript
+
+typescript:
+  title: TypeScript
+
+vue:
+  title: Vue

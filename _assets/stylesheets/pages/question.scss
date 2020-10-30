@@ -1,0 +1,59 @@
+@import "../helper";
+@import "../syntax-highlighting";
+
+
+
+.Article-header {
+  p {
+    float: left;
+    margin: {
+      top: .75em;
+      right: 1.2em;
+    }
+    font-size: 14px;
+    color: #999;
+  }
+}
+
+.Article-commentCount,
+.Article-tags {
+  a {
+    margin-left: .5em;
+  }
+}
+
+.Article-category .Widget-body {
+  > p {
+    margin-bottom: 10px;
+    color: #888;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  > div {
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .fa-pencil {
+    margin-right: .5em;
+    color: #333;
+  }
+}
+
+.Article-license {
+  a {
+    margin-right: .5em;
+  }
+
+  .fa {
+    margin: {
+      right: .15em;
+      left: .5em;
+    }
+  }
+}

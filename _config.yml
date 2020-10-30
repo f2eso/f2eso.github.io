@@ -87,6 +87,17 @@ defaults:
     values:
       layout: page
       comments: true
+  - scope:
+      path: "interview/questions"
+      type: interview
+    values:
+      layout: question
+      css:
+        - pages/question
+      js:
+        - initializers/time
+        - initializers/lazyload
+      comments: true
 
 
 

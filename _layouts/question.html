@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+{% assign url_parts = page.url | split: "/" %}
+{% assign question_id = url_parts[3] %}
+{% assign question = site.data.interview.questions[question_id] %}
+
+{% assign tags = site.data.interview.tags %}
+{% assign subjects = site.data.interview.subjects %}
+{% assign subject = question.subjects.first %}
+
+{% if subjects[subject] == null %}
+  {% assign postCategory = subject %}
+{% else %}
+  {% assign postCategory = subjects[subject].title %}
+{% endif %}
+
+{{ content }}
+
+{% contentfor post_meta %}
+  <p>添加于 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%F" }} {{ page.date | date: "%T" }}</time></p>
+  <p class="Article-commentCount"><i class="fa fa-comments"></i><a href="#disqus_thread" data-disqus-identifier="{{ page.url }}">0 条评论</a></p>
+  {% if question.tags and question.tags.size > 0 %}
+  <p class="Article-tags hidden-xs"><i class="fa fa-tags"><span class="sr-only">标签：</span></i>{% capture _tags %}{% for tag in question.tags %}{% if tags[tag] == null %}<span class="Article-tag">{{ tag }}</span>{% else %}<a class="Article-tag" href="/interview/tags/{{ tag }}/">{{ tags[tag].title }}</a>{% endif %}{% endfor %}{% endcapture %}{{ _tags }}</p>
+  {% endif %}
+{% endcontentfor %}
+
+{% contentfor footer %}
+  <div class="Widget Article-category">
+    <div class="Widget-body">
+      <p><i class="fa fa-pencil"></i>发布在</p>
+      <div>
+        <h3><a href="/interview/subjects/{{ subject }}/">{{ postCategory }}</a></h3>
+        <p>{% if subjects[subject].description %}{{ subjects[subject].description }}{% else %}暂无主题描述{% endif %}</p>
+      </div>
+    </div>
+  </div>
+  {% include widgets/social.html %}
+  {% include widgets/toc.html %}
+{% endcontentfor %}

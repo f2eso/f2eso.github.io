@@ -18,13 +18,13 @@ function generateMergedQuestions() {
 
   const doc = {};
 
-  scanAndSortByAsc(QUESTION_DATA_ROOT).forEach(category => {
-    scanAndSortByAsc([QUESTION_DATA_ROOT, category].join('/')).forEach(questionTitle => {
+  scanAndSortByAsc(QUESTION_DATA_ROOT).forEach(subject => {
+    scanAndSortByAsc([QUESTION_DATA_ROOT, subject].join('/')).forEach(questionTitle => {
       if (questionTitle.indexOf('.') === 0) {
         return;
       }
 
-      const dataPath = [QUESTION_DATA_ROOT, category, questionTitle].join('/');
+      const dataPath = [QUESTION_DATA_ROOT, subject, questionTitle].join('/');
       const data = convertYamlToJson(`${dataPath}/metadata.yml`);
       const frontMatterContent = fs.readFileSync(`${dataPath}/metadata.yml`).toString();
       const docContent = fs.readFileSync(`${dataPath}/readme.md`).toString();
@@ -34,7 +34,7 @@ function generateMergedQuestions() {
 
       doc[questionTitle] = {
         ...data,
-        categories: [category],
+        subjects: [subject],
       };
     });
   });
