@@ -1,0 +1,21 @@
+<ul class="QuestionList">
+  {% assign total_count = include.questions.size %}
+  {% assign limit_count = include.limit %}
+  {% assign offset_index = 0 %}
+  {% if limit_count and total_count > limit_count %}
+    {% assign offset_index = total_count | minus: limit_count %}
+  {% endif %}
+  {% for question in include.questions reversed limit: limit_count offset: offset_index %}
+    {% assign q = question[1] %}
+    <li class="QuestionList-item InterviewQuestion">
+      <h3 class="InterviewQuestion-title" data-toc-skip="true"><a href="/interview/questions/{{ question[0] }}/">{{ q.title }}</a></h3>
+      <div class="InterviewQuestion-footer"><i class="fa fa-pencil"></i><time datetime="{{ q.date | date_to_xmlschema }}">{{ q.date | date: "%F" }}</time><div class="InterviewQuestion-tags">
+          {% for tag in q.tags %}<a href="/interview/tags/{{ tag }}/">{{ site.data.interview.tags[tag].title }}</a>{% endfor %}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+  {% if total_count > limit_count %}
+    <li class="QuestionList-item InterviewQuestion InterviewQuestion--all"><a href="/interview/questions/">查看全部 <i class="fa fa-angle-double-right"></i></a></li>
+  {% endif %}
+</ul>

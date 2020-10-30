@@ -1,0 +1,5 @@
+{% assign questions = site.data.interview.questions %}
+{% assign total_count = questions.size %}
+{% assign preview_count = include.limit | default: 10 %}
+<p>当前有 <a href="/interview/questions/">{{ total_count }}</a> 道题{% if total_count > preview_count %}，这里只显示最新添加的 {{ preview_count }} 道{% endif %}：</p>
+{% include partials/questions.html questions=questions limit=preview_count %}

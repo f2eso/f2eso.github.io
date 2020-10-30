@@ -8,11 +8,4 @@ permalink: index.html
 
 <p>你认为「FES」代表什么？是「前端工程师标准化」？还是「前端知识与技能考核评价体系」？</p>
 <h2><a href="/interview/">面试</a></h2>
-{% assign questions = site.data.interview.questions %}
-<p>当前有 <a href="/interview/questions/">{{ questions.size }}</a> 道题：</p>
-<ul>
-  {% for question in questions %}
-    {% assign q = question[1] %}
-    <li><a href="/interview/questions/{{ question[0] }}/">{{ q.title }}</a></li>
-  {% endfor %}
-</ul>
+{% include partials/questions-brief.html limit=5 %}

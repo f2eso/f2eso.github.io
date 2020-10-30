@@ -1,0 +1,75 @@
+@import "../helper";
+
+
+.QuestionList {
+  list-style: none inside none;
+  margin: 0 !important;
+  padding-left: 0;
+
+  &-item {
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.InterviewQuestion {
+  padding: 12px 0;
+
+  &-title {
+    margin: 0;
+    font-size: 1.2em !important;
+  }
+
+  &-footer {
+    margin-top: 8px;
+    font-size: 14px;
+
+    .fa {
+      vertical-align: middle;
+    }
+
+    time {
+      margin-left: 5px;
+    }
+  }
+
+  &-footer time,
+  &-tags {
+    @include inline-block;
+  }
+
+  &-tags {
+    margin-left: 1em;
+    @include pie-clearfix;
+
+    a {
+      float: left;
+      padding: 1px 8px;
+      font: {
+        size: 12px;
+        weight: 400;
+      }
+      background-color: #cfe5f0;
+      border-radius: 2px;
+
+      + a {
+        margin-left: 5px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #0871ab;
+      }
+    }
+  }
+
+  &--all {
+    font-size: 14px;
+  }
+}

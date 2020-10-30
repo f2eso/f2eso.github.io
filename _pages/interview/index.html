@@ -13,12 +13,5 @@ permalink: /interview/index.html
   {% include widgets/toc.html %}
 {% endcontentfor %}
 
-{% assign questions = site.data.interview.questions %}
 <h2>题集</h2>
-<p>当前有 <a href="/interview/questions/">{{ questions.size }}</a> 道题：</p>
-<ul>
-  {% for question in questions %}
-    {% assign q = question[1] %}
-    <li><a href="/interview/questions/{{ question[0] }}/">{{ q.title }}</a></li>
-  {% endfor %}
-</ul>
+{% include partials/questions-brief.html %}

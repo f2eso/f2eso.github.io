@@ -8,9 +8,4 @@ permalink: /interview/questions/index.html
   {% include widgets/toc.html %}
 {% endcontentfor %}
 
-<ul>
-  {% for question in site.data.interview.questions %}
-    {% assign q = question[1] %}
-    <li><a href="/interview/questions/{{ question[0] }}/">{{ q.title }}</a></li>
-  {% endfor %}
-</ul>
+{% include partials/questions.html questions=site.data.interview.questions %}
