@@ -1,0 +1,52 @@
+subject:
+  questions:
+    browser:
+      - reflow-and-repaint
+    engineering:
+      - single-page-application
+    framework:
+      - data-binding-in-vue
+    programming:
+      - lexical-closure
+    security:
+      - cross-site-scripting
+    web-design:
+      - absolute-centering
+      - box-model
+      - cascade-and-inheritance
+      - defer-and-async-attributes-of-script-tag
+      - formatting-context
+      - positioning-and-floats
+      - search-engine-optimization
+      - semantic-html
+  sequence:
+    - web-design
+    - security
+    - programming
+    - framework
+    - engineering
+    - browser
+tag:
+  questions:
+    css:
+      - reflow-and-repaint
+      - absolute-centering
+      - box-model
+      - cascade-and-inheritance
+      - formatting-context
+      - positioning-and-floats
+    javascript:
+      - single-page-application
+      - data-binding-in-vue
+      - lexical-closure
+    vue:
+      - data-binding-in-vue
+    html:
+      - defer-and-async-attributes-of-script-tag
+      - search-engine-optimization
+      - semantic-html
+  sequence:
+    - css
+    - javascript
+    - html
+    - vue

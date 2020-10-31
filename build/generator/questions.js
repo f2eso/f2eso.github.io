@@ -5,7 +5,7 @@ const yaml = require('js-yaml');
 
 const { convertYamlToJson } = require('../helper');
 
-const QUESTION_LOCAL_DATA = path.resolve(__dirname, '../../_data/interview/questions.yml');
+const LOCAL_DATA_ROOT = path.resolve(__dirname, '../../_data/interview');
 const QUESTION_DOC_ROOT = path.resolve(__dirname, '../../_interview/questions');
 const QUESTION_DATA_ROOT = path.resolve(__dirname, '../../vendors/interview/data/questions');
 
@@ -13,22 +13,80 @@ function scanAndSortByAsc(filePath) {
   return fs.readdirSync(filePath).slice();
 }
 
+function generateQuestions(questions) {
+  const doc = {};
+  const sortedQuestions = questions.slice();
+
+  sortedQuestions.sort((a, b) => a.date.getTime() < b.date.getTime() ? -1 : 1);
+  sortedQuestions.forEach(({ id, ...q }) => { doc[id] = q; });
+
+  const questionLocalData = `${LOCAL_DATA_ROOT}/questions.yml`
+
+  if (!fs.existsSync(questionLocalData)) {
+    execSync(`touch ${questionLocalData}`);
+  }
+
+  fs.writeFileSync(questionLocalData, yaml.safeDump(doc));
+}
+
+function generateCategorizedQuestions(subjects, tags) {
+  const sortedSubjects = Object.keys(subjects);
+
+  sortedSubjects.sort((a, b) => subjects[a].length > subjects[b].length ? -1 : 1);
+
+  const sortedTags = Object.keys(tags);
+
+  sortedTags.sort((a, b) => tags[a].length >= tags[b].length ? -1 : 1);
+
+  const categorizedQuestionData = `${LOCAL_DATA_ROOT}/categorized-questions.yml`;
+
+  if (!fs.existsSync(categorizedQuestionData)) {
+    execSync(`touch ${categorizedQuestionData}`);
+  }
+
+  fs.writeFileSync(categorizedQuestionData, yaml.safeDump({
+    subject: {
+      questions: subjects,
+      sequence: sortedSubjects,
+    },
+    tag: {
+      questions: tags,
+      sequence: sortedTags,
+    },
+  }));
+}
+
 function generateMergedQuestions() {
   execSync(`rm -rf ${QUESTION_DOC_ROOT} && mkdir ${QUESTION_DOC_ROOT}`);
 
-  const doc = {};
   const questions = [];
+  const subjects = {};
+  const tags = {};
 
   scanAndSortByAsc(QUESTION_DATA_ROOT).forEach(subject => {
+    subjects[subject] = [];
+
     scanAndSortByAsc([QUESTION_DATA_ROOT, subject].join('/')).forEach(questionTitle => {
       if (questionTitle.indexOf('.') === 0) {
         return;
       }
 
+      subjects[subject].push(questionTitle);
+
       const dataPath = [QUESTION_DATA_ROOT, subject, questionTitle].join('/');
       const data = convertYamlToJson(`${dataPath}/metadata.yml`);
       const frontMatterContent = fs.readFileSync(`${dataPath}/metadata.yml`).toString();
       const filePath = `${QUESTION_DOC_ROOT}/${questionTitle}.md`;
+
+      if (Array.isArray(data.tags)) {
+        data.tags.forEach(tag => {
+          if (!tags[tag]) {
+            tags[tag] = [];
+          }
+
+          tags[tag].push(questionTitle);
+        });
+      }
 
       let docContent = fs.readFileSync(`${dataPath}/readme.md`).toString();
 
@@ -53,17 +111,8 @@ function generateMergedQuestions() {
     });
   });
 
-  questions.sort((a, b) => a.date.getTime() < b.date.getTime() ? -1 : 1);
-
-  questions.forEach(({ id, ...q }) => {
-    doc[id] = q;
-  });
-
-  if (!fs.existsSync(QUESTION_LOCAL_DATA)) {
-    execSync(`touch ${QUESTION_LOCAL_DATA}`);
-  }
-
-  fs.writeFileSync(QUESTION_LOCAL_DATA, yaml.safeDump(doc));
+  generateQuestions(questions);
+  generateCategorizedQuestions(subjects, tags);
 }
 
 module.exports = {
