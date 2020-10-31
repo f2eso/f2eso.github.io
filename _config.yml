@@ -92,7 +92,7 @@ defaults:
     values:
       layout: interview/question
       css:
-        - pages/question
+        - pages/interview/question
       js:
         - initializers/time
         - initializers/lazyload

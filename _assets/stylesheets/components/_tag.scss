@@ -1,0 +1,33 @@
+@import "../helper";
+
+
+
+.TagList {
+  list-style: none inside none;
+  margin-bottom: 0;
+  padding-left: 0;
+  @include pie-clearfix;
+
+  &-item {
+    float: left;
+    padding: 3px 4px;
+
+
+    a {
+      display: inline-block;
+      padding: 2px 8px;
+      font: {
+        size: 14px;
+        weight: 400;
+      }
+      background-color: #cfe5f0;
+      border-radius: 3px;
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #0871ab;
+      }
+    }
+  }
+}

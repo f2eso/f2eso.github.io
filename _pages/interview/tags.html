@@ -1,5 +1,7 @@
 ---
 title: 问题标签
+css:
+  - pages/interview/tags
 permalink: /interview/tags/index.html
 ---
 
@@ -8,10 +10,4 @@ permalink: /interview/tags/index.html
   {% include widgets/toc.html %}
 {% endcontentfor %}
 
-<ul>
-  {% assign categorized = site.data.interview.categorized-questions %}
-  {% assign tags = site.data.interview.tags %}
-  {% for k in categorized.tag.sequence %}
-    <li><a href="/interview/tags/{{ k }}/">{{ tags[k].title }} ({{ categorized.tag.questions[k].size }})</a></li>
-  {% endfor %}
-</ul>
+{% include partials/interview/tags.html %}

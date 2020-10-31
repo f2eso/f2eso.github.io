@@ -1,7 +1,7 @@
 ---
 title: 面试题集
 css:
-  - pages/questions
+  - pages/interview/questions
 banner:
   url: pages/interview/questions/banner
   description: 面试
@@ -12,13 +12,7 @@ permalink: /interview/questions/index.html
 {% contentfor footer %}
   <aside class="Widget Widget--tags">
     <div class="Widget-body">
-      <ul>
-        {% assign categorized = site.data.interview.categorized-questions %}
-        {% assign tags = site.data.interview.tags %}
-        {% for k in categorized.tag.sequence %}
-          <li><a href="/interview/tags/{{ k }}/">{{ tags[k].title }} ({{ categorized.tag.questions[k].size }})</a></li>
-        {% endfor %}
-      </ul>
+      {% include partials/interview/tags.html %}
     </div>
   </aside>
   {% include widgets/social.html %}
