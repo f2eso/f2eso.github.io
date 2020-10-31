@@ -1,0 +1,17 @@
+---
+title: 问题标签
+permalink: /interview/tags/index.html
+---
+
+{% contentfor footer %}
+  {% include widgets/social.html %}
+  {% include widgets/toc.html %}
+{% endcontentfor %}
+
+<ul>
+  {% assign categorized = site.data.interview.categorized-questions %}
+  {% assign tags = site.data.interview.tags %}
+  {% for k in categorized.tag.sequence %}
+    <li><a href="/interview/tags/{{ k }}/">{{ tags[k].title }} ({{ categorized.tag.questions[k].size }})</a></li>
+  {% endfor %}
+</ul>

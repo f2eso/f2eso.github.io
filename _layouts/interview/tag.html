@@ -1,0 +1,12 @@
+---
+layout: page
+---
+
+{% assign url_parts = page.url | split: "/" %}
+{% assign tag_id = url_parts[3] %}
+{% include partials/interview/filtered-questions.html type="tag" condition=tag_id %}
+
+{% contentfor footer %}
+  {% include widgets/social.html %}
+  {% include widgets/toc.html %}
+{% endcontentfor %}

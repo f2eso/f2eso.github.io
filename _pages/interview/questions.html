@@ -10,12 +10,23 @@ permalink: /interview/questions/index.html
 ---
 
 {% contentfor footer %}
+  <aside class="Widget Widget--tags">
+    <div class="Widget-body">
+      <ul>
+        {% assign categorized = site.data.interview.categorized-questions %}
+        {% assign tags = site.data.interview.tags %}
+        {% for k in categorized.tag.sequence %}
+          <li><a href="/interview/tags/{{ k }}/">{{ tags[k].title }} ({{ categorized.tag.questions[k].size }})</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
   {% include widgets/social.html %}
   {% include widgets/toc.html %}
 {% endcontentfor %}
 
 <p>233</p>
 <h2 id="subjects">主题</h2>
-{% include partials/subjects.html %}
+{% include partials/interview/subjects.html %}
 <h2 id="questions">问题</h2>
-{% include partials/questions.html questions=site.data.interview.questions %}
+{% include partials/interview/questions.html questions=site.data.interview.questions %}

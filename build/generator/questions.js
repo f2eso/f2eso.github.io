@@ -71,6 +71,20 @@ function generateSubjectDocs() {
   });
 }
 
+function generateTagDocs() {
+  const tagDocRoot = `${INTERVIEW_DOC_ROOT}/tags`;
+
+  execSync(`rm -rf ${tagDocRoot} && mkdir ${tagDocRoot}`);
+
+  const tagData = convertYamlToJson(`${LOCAL_DATA_ROOT}/tags.yml`);
+
+  Object.keys(tagData).forEach(k => {
+    const tag = tagData[k];
+
+    fs.writeFileSync(`${tagDocRoot}/${k}.md`, `---\ntitle: 「${tag.title}」标签的问题\n---\n`);
+  });
+}
+
 function generateMergedQuestions() {
   execSync(`rm -rf ${QUESTION_DOC_ROOT} && mkdir ${QUESTION_DOC_ROOT}`);
 
@@ -130,6 +144,7 @@ function generateMergedQuestions() {
   generateCategorizedQuestions(subjects, tags);
 
   generateSubjectDocs();
+  generateTagDocs();
 }
 
 module.exports = {

@@ -90,7 +90,7 @@ defaults:
       path: "interview/questions"
       type: interview
     values:
-      layout: question
+      layout: interview/question
       css:
         - pages/question
       js:
@@ -101,7 +101,12 @@ defaults:
       path: "interview/subjects"
       type: interview
     values:
-      layout: subject
+      layout: interview/subject
+  - scope:
+      path: "interview/tags"
+      type: interview
+    values:
+      layout: interview/tag
 
 
 
