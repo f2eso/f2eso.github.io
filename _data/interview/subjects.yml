@@ -1,23 +1,29 @@
 web-design:
   title: 网页设计
   thumbnail: pages/interview/questions/banner
+  banner: pages/interview/questions/banner
 
 programming:
   title: 程序设计
   thumbnail: pages/interview/questions/banner
+  banner: pages/interview/questions/banner
 
 browser:
   title: 浏览器
   thumbnail: pages/interview/questions/banner
+  banner: pages/interview/questions/banner
 
 security:
   title: 网络安全
   thumbnail: pages/interview/questions/banner
+  banner: pages/interview/questions/banner
 
 engineering:
   title: 前端工程
   thumbnail: pages/interview/questions/banner
+  banner: pages/interview/questions/banner
 
 framework:
   title: 库与框架
   thumbnail: pages/interview/questions/banner
+  banner: pages/interview/questions/banner

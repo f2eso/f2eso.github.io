@@ -18,6 +18,15 @@ layout: page
 
 {{ content }}
 
+{% contentfor post_banner %}
+  <div class="Page-banner hidden-xs" style="background-image: url({{ subjects[subject].banner | asset_path }});">
+    <figure class="sr-only">
+      <img src="{{ subjects[subject].banner | asset_path }}" alt="{{ postCategory }}">
+      <figcaption>{{ postCategory }}</figcaption>
+    </figure>
+  </div>
+{% endcontentfor %}
+
 {% contentfor post_meta %}
   <p>添加于 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%F" }} {{ page.date | date: "%T" }}</time></p>
   <p class="Article-commentCount"><i class="fa fa-comments"></i><a href="#disqus_thread" data-disqus-identifier="{{ page.url }}">0 条评论</a></p>
