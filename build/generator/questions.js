@@ -6,7 +6,8 @@ const yaml = require('js-yaml');
 const { convertYamlToJson } = require('../helper');
 
 const LOCAL_DATA_ROOT = path.resolve(__dirname, '../../_data/interview');
-const QUESTION_DOC_ROOT = path.resolve(__dirname, '../../_interview/questions');
+const INTERVIEW_DOC_ROOT = path.resolve(__dirname, '../../_interview');
+const QUESTION_DOC_ROOT = `${INTERVIEW_DOC_ROOT}/questions`;
 const QUESTION_DATA_ROOT = path.resolve(__dirname, '../../vendors/interview/data/questions');
 
 function scanAndSortByAsc(filePath) {
@@ -54,6 +55,20 @@ function generateCategorizedQuestions(subjects, tags) {
       sequence: sortedTags,
     },
   }));
+}
+
+function generateSubjectDocs() {
+  const subjectDocRoot = `${INTERVIEW_DOC_ROOT}/subjects`;
+
+  execSync(`rm -rf ${subjectDocRoot} && mkdir ${subjectDocRoot}`);
+
+  const subjectData = convertYamlToJson(`${LOCAL_DATA_ROOT}/subjects.yml`);
+
+  Object.keys(subjectData).forEach(k => {
+    const subject = subjectData[k];
+
+    fs.writeFileSync(`${subjectDocRoot}/${k}.md`, `---\ntitle: 「${subject.title}」主题的问题\n---\n`);
+  });
 }
 
 function generateMergedQuestions() {
@@ -113,6 +128,8 @@ function generateMergedQuestions() {
 
   generateQuestions(questions);
   generateCategorizedQuestions(subjects, tags);
+
+  generateSubjectDocs();
 }
 
 module.exports = {

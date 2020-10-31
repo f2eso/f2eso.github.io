@@ -86,7 +86,6 @@ defaults:
       type: interview
     values:
       layout: page
-      comments: true
   - scope:
       path: "interview/questions"
       type: interview
@@ -98,6 +97,11 @@ defaults:
         - initializers/time
         - initializers/lazyload
       comments: true
+  - scope:
+      path: "interview/subjects"
+      type: interview
+    values:
+      layout: subject
 
 
 

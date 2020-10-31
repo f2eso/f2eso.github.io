@@ -16,21 +16,6 @@ permalink: /interview/questions/index.html
 
 <p>233</p>
 <h2 id="subjects">主题</h2>
-{% assign categorized = site.data.interview.categorized-questions %}
-{% assign subjects = site.data.interview.subjects %}
-{% assign tags = site.data.interview.tags %}
-<ul class="SubjectList row">
-  {% for k in categorized.subject.sequence %}
-    <li class="SubjectList-item col-xs-6 col-sm-4 col-md-3">
-      <a class="QuestionSubject" href="/interview/subjects/{{ k }}/" style="background-image: url('{{ subjects[k].thumbnail | asset_path }}');">
-        <div class="QuestionSubject-content">
-          <h3 class="QuestionSubject-title" data-toc-skip="true">{{ subjects[k].title }}</h3>
-          <p class="QuestionSubject-description">共 {{ categorized.subject.questions[k].size }} 题</p>
-        </div>
-        <div class="QuestionSubject-overlay"></div>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+{% include partials/subjects.html %}
 <h2 id="questions">问题</h2>
 {% include partials/questions.html questions=site.data.interview.questions %}

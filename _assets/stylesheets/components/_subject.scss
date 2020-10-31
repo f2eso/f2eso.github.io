@@ -1,0 +1,69 @@
+@import "../helper";
+
+
+
+.SubjectList {
+  list-style: none inside none;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  &-item {
+    padding: {
+      top: 6px;
+      bottom: 6px;
+    }
+  }
+}
+
+.QuestionSubject {
+  display: block;
+  padding: 12px 15px;
+  color: #fff !important;
+  text-decoration: none !important;
+  background: none #0871ab 50% 50%;
+  background-size: cover;
+
+  &,
+  &-overlay {
+    border-radius: 6px;
+  }
+
+  &,
+  &-content {
+    position: relative;
+  }
+
+  &-overlay {
+    @include stretch;
+    z-index: 1;
+    background-color: #000;
+    opacity: .3;
+  }
+
+  &-content {
+    z-index: 2;
+  }
+
+  &-title {
+    margin: 0;
+    font: {
+      size: 1.1em !important;
+    }
+  }
+
+  &-description {
+    margin: {
+      top: 1.2em;
+      bottom: 0 !important;
+    }
+    font: {
+      size: 14px;
+      weight: 400;
+    }
+    line-height: inherit !important;
+  }
+
+  &:hover &-overlay {
+    opacity: .15;
+  }
+}
