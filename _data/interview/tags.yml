@@ -7,8 +7,23 @@ css:
 javascript:
   title: JavaScript
 
+document-object-model:
+  title: DOM
+
+design-pattern:
+  title: 设计模式
+
+architectural-pattern:
+  title: 架构模式
+
 typescript:
   title: TypeScript
 
 vue:
   title: Vue
+
+programming-paradigm:
+  title: 编程范式
+
+performance-optimization:
+  title: 性能优化

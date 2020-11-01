@@ -1,5 +1,5 @@
 ---
-title: 「格式化上下文」及其影响因素是什么？
+title: 「格式化上下文」的定义及其影响因素是什么？
 description:
 tags:
   - css

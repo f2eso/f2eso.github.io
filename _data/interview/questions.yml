@@ -1,3 +1,11 @@
+single-page-application:
+  title: 聊聊你对「单页面应用」的理解
+  description: 什么是「单页面应用」？实现策略有哪些？
+  tags:
+    - javascript
+  date: 2020-10-29T08:30:18.000Z
+  subjects:
+    - engineering
 semantic-html:
   title: 如何编写有语义的页面？
   description: 「跨站脚本（XSS）」有几种？如何防范？
@@ -7,30 +15,6 @@ semantic-html:
   answered: true
   subjects:
     - web-design
-reflow-and-repaint:
-  title: 「回流」与「重绘」有何区别？
-  description: null
-  tags:
-    - css
-  date: 2020-10-29T08:30:18.000Z
-  subjects:
-    - browser
-lexical-closure:
-  title: 谈谈你对「闭包」的理解
-  description: 什么是「闭包」？
-  tags:
-    - javascript
-  date: 2020-10-29T08:30:18.000Z
-  subjects:
-    - programming
-single-page-application:
-  title: 聊聊你对「单页面应用」的理解
-  description: 什么是「单页面应用」？实现策略有哪些？
-  tags:
-    - javascript
-  date: 2020-10-29T08:30:18.000Z
-  subjects:
-    - engineering
 absolute-centering:
   title: 在 CSS 中如何实现绝对居中？
   description: 实现绝对居中有哪几种方式？各有什么缺点？
@@ -39,13 +23,14 @@ absolute-centering:
   date: 2020-10-29T08:30:18.000Z
   subjects:
     - web-design
-cross-site-scripting:
-  title: 如何防范「跨站脚本（XSS）」攻击？
-  description: 「跨站脚本（XSS）」有几种？如何防范？
-  tags: null
+lexical-closure:
+  title: 谈谈你对「闭包」的理解
+  description: 什么是「闭包」？
+  tags:
+    - javascript
   date: 2020-10-29T08:30:18.000Z
   subjects:
-    - security
+    - programming
 data-binding-in-vue:
   title: 说说 Vue 中数据绑定的特点及实现方式
   description: 在 Vue 中是如何实现数据绑定的？
@@ -55,6 +40,22 @@ data-binding-in-vue:
   date: 2020-10-29T08:30:18.000Z
   subjects:
     - framework
+cross-site-scripting:
+  title: 如何防范「跨站脚本（XSS）」攻击？
+  description: 「跨站脚本（XSS）」有几种？如何防范？
+  tags: null
+  date: 2020-10-29T08:30:18.000Z
+  subjects:
+    - security
+reflow-and-repaint:
+  title: 「回流」与「重绘」有何区别？
+  description: null
+  tags:
+    - css
+    - performance-optimization
+  date: 2020-10-29T08:30:18.000Z
+  subjects:
+    - browser
 search-engine-optimization:
   title: 怎样进行 SEO？
   description: null
@@ -90,7 +91,7 @@ positioning-and-floats:
   subjects:
     - web-design
 formatting-context:
-  title: 「格式化上下文」及其影响因素是什么？
+  title: 「格式化上下文」的定义及其影响因素是什么？
   description: null
   tags:
     - css
@@ -105,3 +106,243 @@ cascade-and-inheritance:
   date: 2020-10-30T04:57:00.000Z
   subjects:
     - web-design
+saga-and-thunk:
+  title: 说说「saga」和「thunk」分别是什么？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T00:56:12.000Z
+  subjects:
+    - programming
+middleware:
+  title: 聊聊对「中间件」的理解？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T00:57:36.000Z
+  subjects:
+    - programming
+imperative-and-declarative-programming-paradigms:
+  title: 「命令式编程」与「声明式编程」的区别是？
+  description: null
+  tags:
+    - javascript
+    - programming-paradigm
+  date: 2020-11-01T01:02:53.000Z
+  subjects:
+    - programming
+object-oriented-and-functional-programming-paradigms:
+  title: 「面向对象编程」与「函数式编程」各自的优缺点是什么？
+  description: null
+  tags:
+    - javascript
+    - programming-paradigm
+  date: 2020-11-01T01:07:49.000Z
+  subjects:
+    - programming
+metaprogramming:
+  title: 什么是「元编程」？
+  description: null
+  tags:
+    - javascript
+    - programming-paradigm
+  date: 2020-11-01T01:10:33.000Z
+  subjects:
+    - programming
+javascript-data-types:
+  title: JS 的数据类型有哪些？如何判断一个变量的类型？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T05:22:40.000Z
+  subjects:
+    - programming
+prototype-chain:
+  title: 什么是「原型链」？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T05:27:49.000Z
+  subjects:
+    - programming
+inheritance-in-javascript:
+  title: 在 JS 中实现继承的方式有哪些？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T05:30:36.000Z
+  subjects:
+    - programming
+properties-of-an-object:
+  title: 如何判断一个属性属不属于某个对象？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T05:33:24.000Z
+  subjects:
+    - programming
+arrow-function:
+  title: 箭头函数有什么特点？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T05:35:46.000Z
+  subjects:
+    - programming
+changing-the-execution-context:
+  title: .call()、.apply() 和 .bind() 三者之间有何异同点？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T05:41:35.000Z
+  subjects:
+    - programming
+asynchronous-programming:
+  title: 如何进行异步编程？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T05:44:51.000Z
+  subjects:
+    - programming
+multi-device-web:
+  title: 如何实现支持多设备的 web 页面？
+  description: null
+  tags:
+    - html
+    - css
+    - javascript
+  date: 2020-11-01T06:09:33.000Z
+  subjects:
+    - web-design
+1px-border-effect-in-hd-devices:
+  title: 高清屏 1px 边框问题如何解决？
+  description: null
+  tags:
+    - css
+  date: 2020-11-01T06:18:23.000Z
+  subjects:
+    - web-design
+critical-rendering-path:
+  title: 浏览器的渲染流程是怎样的？
+  description: null
+  tags:
+    - performance-optimization
+  date: 2020-11-01T06:42:45.000Z
+  subjects:
+    - browser
+factors-of-browser-memory-growth:
+  title: 浏览器内存增长的影响因素是什么？
+  description: null
+  tags:
+    - performance-optimization
+  date: 2020-11-01T06:54:05.000Z
+  subjects:
+    - browser
+model-view-whatever-patterns:
+  title: 「MV*」模式之间有何区别？
+  description: null
+  tags:
+    - architectural-pattern
+  date: 2020-11-01T09:05:52.000Z
+  subjects:
+    - programming
+event-loop:
+  title: 什么是「事件循环」？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T09:09:45.000Z
+  subjects:
+    - browser
+cross-origin-access:
+  title: 如何进行「跨域」？
+  description: null
+  tags: null
+  date: 2020-11-01T09:15:34.000Z
+  subjects:
+    - browser
+how-does-javascript-execute:
+  title: JS 代码是如何执行的？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T09:20:55.000Z
+  subjects:
+    - browser
+browser-caching:
+  title: 浏览器是如何进行缓存的？
+  description: null
+  tags: null
+  date: 2020-11-01T09:24:34.000Z
+  subjects:
+    - browser
+offline-storage:
+  title: 离线存储方案有哪些？
+  description: null
+  tags: null
+  date: 2020-11-01T09:36:46.000Z
+  subjects:
+    - browser
+dom-event:
+  title: DOM 事件的相关机制是怎样的？
+  description: null
+  tags: null
+  date: 2020-11-01T09:51:34.000Z
+  subjects:
+    - browser
+design-patterns:
+  title: 常见的设计模式有哪些？它们的应用场景？
+  description: null
+  tags:
+    - design-pattern
+  date: 2020-11-01T10:04:50.000Z
+  subjects:
+    - programming
+fork-join-model:
+  title: 什么是「Fork-Join 模型」？如何实现？
+  description: null
+  tags:
+    - design-pattern
+  date: 2020-11-01T10:08:36.000Z
+  subjects:
+    - programming
+flux-and-redux:
+  title: 「Flux」与「Redux」有什么区别？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T11:13:28.000Z
+  subjects:
+    - framework
+modular-frontend-development:
+  title: 前端模块化方案有哪些？有何区别？
+  description: null
+  tags:
+    - javascript
+  date: 2020-11-01T11:17:49.000Z
+  subjects:
+    - engineering
+web-performance:
+  title: 如何进行性能优化？
+  description: null
+  tags:
+    - performance-optimization
+  date: 2020-11-01T11:25:34.000Z
+  subjects:
+    - engineering
+above-the-fold:
+  title: 如何进行首屏优化？
+  description: null
+  tags:
+    - performance-optimization
+  date: 2020-11-01T11:25:34.000Z
+  subjects:
+    - web-design
+separation-of-frontend-and-backend:
+  title: 「前后端分离」是什么？如何实施？
+  description: null
+  tags: null
+  date: 2020-11-01T11:41:29.000Z
+  subjects:
+    - engineering

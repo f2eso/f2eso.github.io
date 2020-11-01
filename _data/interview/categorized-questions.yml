@@ -1,52 +1,121 @@
 subject:
   questions:
     browser:
+      - browser-caching
+      - critical-rendering-path
+      - cross-origin-access
+      - dom-event
+      - event-loop
+      - factors-of-browser-memory-growth
+      - how-does-javascript-execute
+      - offline-storage
       - reflow-and-repaint
     engineering:
+      - modular-frontend-development
+      - separation-of-frontend-and-backend
       - single-page-application
+      - web-performance
     framework:
       - data-binding-in-vue
+      - flux-and-redux
     programming:
+      - arrow-function
+      - asynchronous-programming
+      - changing-the-execution-context
+      - design-patterns
+      - fork-join-model
+      - imperative-and-declarative-programming-paradigms
+      - inheritance-in-javascript
+      - javascript-data-types
       - lexical-closure
+      - metaprogramming
+      - middleware
+      - model-view-whatever-patterns
+      - object-oriented-and-functional-programming-paradigms
+      - properties-of-an-object
+      - prototype-chain
+      - saga-and-thunk
     security:
       - cross-site-scripting
     web-design:
+      - 1px-border-effect-in-hd-devices
+      - above-the-fold
       - absolute-centering
       - box-model
       - cascade-and-inheritance
       - defer-and-async-attributes-of-script-tag
       - formatting-context
+      - multi-device-web
       - positioning-and-floats
       - search-engine-optimization
       - semantic-html
   sequence:
-    - web-design
-    - security
     - programming
-    - framework
-    - engineering
+    - web-design
     - browser
+    - engineering
+    - framework
+    - security
 tag:
   questions:
+    performance-optimization:
+      - critical-rendering-path
+      - factors-of-browser-memory-growth
+      - reflow-and-repaint
+      - web-performance
+      - above-the-fold
+    javascript:
+      - event-loop
+      - how-does-javascript-execute
+      - modular-frontend-development
+      - single-page-application
+      - data-binding-in-vue
+      - flux-and-redux
+      - arrow-function
+      - asynchronous-programming
+      - changing-the-execution-context
+      - imperative-and-declarative-programming-paradigms
+      - inheritance-in-javascript
+      - javascript-data-types
+      - lexical-closure
+      - metaprogramming
+      - middleware
+      - object-oriented-and-functional-programming-paradigms
+      - properties-of-an-object
+      - prototype-chain
+      - saga-and-thunk
+      - multi-device-web
     css:
       - reflow-and-repaint
+      - 1px-border-effect-in-hd-devices
       - absolute-centering
       - box-model
       - cascade-and-inheritance
       - formatting-context
+      - multi-device-web
       - positioning-and-floats
-    javascript:
-      - single-page-application
-      - data-binding-in-vue
-      - lexical-closure
     vue:
       - data-binding-in-vue
+    design-pattern:
+      - design-patterns
+      - fork-join-model
+    programming-paradigm:
+      - imperative-and-declarative-programming-paradigms
+      - metaprogramming
+      - object-oriented-and-functional-programming-paradigms
+    architectural-pattern:
+      - model-view-whatever-patterns
     html:
       - defer-and-async-attributes-of-script-tag
+      - multi-device-web
       - search-engine-optimization
       - semantic-html
   sequence:
-    - css
     - javascript
+    - css
+    - performance-optimization
     - html
+    - programming-paradigm
+    - design-pattern
     - vue
+    - architectural-pattern
