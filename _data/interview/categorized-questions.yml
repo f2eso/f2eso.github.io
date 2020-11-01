@@ -10,6 +10,8 @@ subject:
       - how-does-javascript-execute
       - offline-storage
       - reflow-and-repaint
+    communication:
+      - three-way-handshake-and-four-way-handshake
     engineering:
       - modular-frontend-development
       - separation-of-frontend-and-backend
@@ -18,6 +20,8 @@ subject:
     framework:
       - data-binding-in-vue
       - flux-and-redux
+    language:
+      - type-inference-in-typescript
     programming:
       - arrow-function
       - asynchronous-programming
@@ -35,8 +39,11 @@ subject:
       - properties-of-an-object
       - prototype-chain
       - saga-and-thunk
+      - uploading-large-files
     security:
+      - cross-site-request-forgery
       - cross-site-scripting
+    tool: []
     web-design:
       - 1px-border-effect-in-hd-devices
       - above-the-fold
@@ -54,8 +61,11 @@ subject:
     - web-design
     - browser
     - engineering
-    - framework
     - security
+    - framework
+    - language
+    - communication
+    - tool
 tag:
   questions:
     performance-optimization:
@@ -84,6 +94,7 @@ tag:
       - properties-of-an-object
       - prototype-chain
       - saga-and-thunk
+      - uploading-large-files
       - multi-device-web
     css:
       - reflow-and-repaint
@@ -94,8 +105,12 @@ tag:
       - formatting-context
       - multi-device-web
       - positioning-and-floats
+    tcp:
+      - three-way-handshake-and-four-way-handshake
     vue:
       - data-binding-in-vue
+    typescript:
+      - type-inference-in-typescript
     design-pattern:
       - design-patterns
       - fork-join-model
@@ -117,5 +132,7 @@ tag:
     - html
     - programming-paradigm
     - design-pattern
+    - tcp
     - vue
+    - typescript
     - architectural-pattern

@@ -27,3 +27,18 @@ framework:
   title: 库与框架
   thumbnail: subjects/framework/thumbnail
   banner: subjects/framework/banner
+
+communication:
+  title: 网络通信
+  thumbnail: subjects/framework/thumbnail
+  banner: subjects/framework/banner
+
+language:
+  title: 编程语言
+  thumbnail: subjects/framework/thumbnail
+  banner: subjects/framework/banner
+
+tool:
+  title: 工具
+  thumbnail: subjects/framework/thumbnail
+  banner: subjects/framework/banner
