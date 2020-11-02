@@ -48,3 +48,6 @@ sorting-algorithm:
 
 search-algorithm:
   title: 查找算法
+
+leetcode:
+  title: LeetCode

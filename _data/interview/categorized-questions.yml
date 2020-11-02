@@ -39,6 +39,7 @@ subject:
       - asynchronous-programming
       - design-patterns
       - fork-join-model
+      - generating-excel-sheet-column-title
       - imperative-and-declarative-programming-paradigms
       - metaprogramming
       - middleware
@@ -89,7 +90,6 @@ tag:
       - how-does-javascript-execute
       - modular-frontend-development
       - single-page-application
-      - data-binding-in-vue
       - flux-and-redux
       - arrow-function
       - changing-the-execution-context
@@ -99,10 +99,7 @@ tag:
       - properties-of-an-object
       - prototype-chain
       - asynchronous-programming
-      - imperative-and-declarative-programming-paradigms
-      - metaprogramming
       - middleware
-      - object-oriented-and-functional-programming-paradigms
       - saga-and-thunk
       - uploading-large-files
       - multi-device-web
@@ -126,30 +123,25 @@ tag:
       - data-binding-in-vue
       - lifecycle-hooks-of-vue-component
       - vue-router
-    react-router:
-      - react-router
-    vue-router:
-      - vue-router
     typescript:
       - type-inference-in-typescript
     design-pattern:
       - design-patterns
       - fork-join-model
+    algorithm:
+      - generating-excel-sheet-column-title
+      - object-copying
+      - removing-duplicates-from-array
+      - search-algorithms
+      - sorting-algorithms
+    leetcode:
+      - generating-excel-sheet-column-title
     programming-paradigm:
       - imperative-and-declarative-programming-paradigms
       - metaprogramming
       - object-oriented-and-functional-programming-paradigms
     architectural-pattern:
       - model-view-whatever-patterns
-    algorithm:
-      - object-copying
-      - removing-duplicates-from-array
-      - search-algorithms
-      - sorting-algorithms
-    search-algorithm:
-      - search-algorithms
-    sorting-algorithm:
-      - sorting-algorithms
     html:
       - defer-and-async-attributes-of-script-tag
       - multi-device-web
@@ -165,10 +157,7 @@ tag:
     - react
     - programming-paradigm
     - design-pattern
-    - react-router
-    - vue-router
-    - architectural-pattern
     - tcp
-    - search-algorithm
-    - sorting-algorithm
+    - leetcode
+    - architectural-pattern
     - typescript

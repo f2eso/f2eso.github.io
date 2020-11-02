@@ -14,6 +14,17 @@ function scanAndSortByAsc(filePath) {
   return fs.readdirSync(filePath).slice();
 }
 
+function readMarkdown(filePath) {
+  const content = fs.readFileSync(filePath).toString();
+  const reg = /(\#+) ([^\#\r\n]+)/g;
+
+  if (!reg.test(content)) {
+    return content;
+  }
+
+  return content.replace(reg, (marched, level) => marched.replace(level, level + '#'));
+}
+
 function generateQuestions(questions) {
   const doc = {};
   const sortedQuestions = questions.slice();
@@ -120,12 +131,12 @@ function generateMergedQuestions() {
       let docContent = fs.readFileSync(`${dataPath}/readme.md`).toString();
 
       if (fs.existsSync(`${dataPath}/answer.md`)) {
-        docContent += `\n\n## 回答\n\n${fs.readFileSync(`${dataPath}/answer.md`).toString()}`;
+        docContent += `\n\n## 回答\n\n${readMarkdown(`${dataPath}/answer.md`)}`;
         data.answered = true;
       }
 
       if (fs.existsSync(`${dataPath}/explain.md`)) {
-        docContent += `\n\n## 讲解\n\n${fs.readFileSync(`${dataPath}/explain.md`).toString()}`;
+        docContent += `\n\n## 讲解\n\n${readMarkdown(`${dataPath}/explain.md`)}`;
         data.explained = true;
       }
 
