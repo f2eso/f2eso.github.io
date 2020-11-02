@@ -44,7 +44,7 @@
 
     a,
     span {
-      @include inline-block;
+      vertical-align: middle;
     }
 
     span + a {
