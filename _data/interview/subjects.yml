@@ -30,15 +30,15 @@ framework:
 
 communication:
   title: 网络通信
-  thumbnail: subjects/framework/thumbnail
-  banner: subjects/framework/banner
+  thumbnail: subjects/communication/thumbnail
+  banner: subjects/communication/banner
 
 language:
   title: 编程语言
-  thumbnail: subjects/framework/thumbnail
-  banner: subjects/framework/banner
+  thumbnail: subjects/language/thumbnail
+  banner: subjects/language/banner
 
 tool:
   title: 工具
-  thumbnail: subjects/framework/thumbnail
-  banner: subjects/framework/banner
+  thumbnail: subjects/tool/thumbnail
+  banner: subjects/tool/banner
