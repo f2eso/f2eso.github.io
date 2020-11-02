@@ -1,6 +1,8 @@
 ---
 title: Interview Hacker
 special_title: 面试
+css:
+  - pages/interview/index
 banner:
   url: pages/interview/index/banner
   description: 面试
@@ -9,9 +11,17 @@ permalink: /interview/index.html
 ---
 
 {% contentfor footer %}
+  <aside class="Widget Widget--tags">
+    <div class="Widget-body">
+      {% include partials/interview/tags.html %}
+    </div>
+  </aside>
   {% include widgets/social.html %}
   {% include widgets/toc.html %}
 {% endcontentfor %}
 
-<h2>题集</h2>
-{% include partials/interview/questions-brief.html %}
+<p>233</p>
+<h2 id="subjects">主题</h2>
+{% include partials/interview/subjects.html %}
+<h2 id="questions">问题</h2>
+{% include partials/interview/questions-brief.html limit=25 %}

@@ -1,7 +1,5 @@
 ---
 title: 面试题集
-css:
-  - pages/interview/questions
 banner:
   url: pages/interview/questions/banner
   description: 面试
@@ -10,17 +8,7 @@ permalink: /interview/questions/index.html
 ---
 
 {% contentfor footer %}
-  <aside class="Widget Widget--tags">
-    <div class="Widget-body">
-      {% include partials/interview/tags.html %}
-    </div>
-  </aside>
   {% include widgets/social.html %}
-  {% include widgets/toc.html %}
 {% endcontentfor %}
 
-<p>233</p>
-<h2 id="subjects">主题</h2>
-{% include partials/interview/subjects.html %}
-<h2 id="questions">问题</h2>
 {% include partials/interview/questions.html questions=site.data.interview.questions %}
