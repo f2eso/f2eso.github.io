@@ -7,6 +7,9 @@ collections:
   pages:
     output: true
     permalink: /:path/
+  help:
+    output: true
+    permalink: /:path/
   interview:
     output: true
     permalink: /:collection/:path/
@@ -107,6 +110,12 @@ defaults:
       type: interview
     values:
       layout: interview/tag
+  - scope:
+      path: ""
+      type: help
+    values:
+      layout: help
+      comments: true
 
 
 
