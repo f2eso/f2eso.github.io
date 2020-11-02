@@ -18,27 +18,37 @@ subject:
       - single-page-application
       - web-performance
     framework:
+      - communication-between-components-in-react
+      - communication-between-components-in-vue
       - data-binding-in-vue
       - flux-and-redux
+      - lifecycle-hooks-of-vue-component
+      - lifecycle-methods-of-react-component
+      - react-router
+      - vue-router
     language:
-      - type-inference-in-typescript
-    programming:
       - arrow-function
-      - asynchronous-programming
       - changing-the-execution-context
-      - design-patterns
-      - fork-join-model
-      - imperative-and-declarative-programming-paradigms
       - inheritance-in-javascript
       - javascript-data-types
       - lexical-closure
+      - properties-of-an-object
+      - prototype-chain
+      - type-inference-in-typescript
+    programming:
+      - asynchronous-programming
+      - design-patterns
+      - fork-join-model
+      - imperative-and-declarative-programming-paradigms
       - metaprogramming
       - middleware
       - model-view-whatever-patterns
+      - object-copying
       - object-oriented-and-functional-programming-paradigms
-      - properties-of-an-object
-      - prototype-chain
+      - removing-duplicates-from-array
       - saga-and-thunk
+      - search-algorithms
+      - sorting-algorithms
       - uploading-large-files
     security:
       - cross-site-request-forgery
@@ -60,10 +70,10 @@ subject:
     - programming
     - web-design
     - browser
+    - language
+    - framework
     - engineering
     - security
-    - framework
-    - language
     - communication
     - tool
 tag:
@@ -82,17 +92,17 @@ tag:
       - data-binding-in-vue
       - flux-and-redux
       - arrow-function
-      - asynchronous-programming
       - changing-the-execution-context
-      - imperative-and-declarative-programming-paradigms
       - inheritance-in-javascript
       - javascript-data-types
       - lexical-closure
+      - properties-of-an-object
+      - prototype-chain
+      - asynchronous-programming
+      - imperative-and-declarative-programming-paradigms
       - metaprogramming
       - middleware
       - object-oriented-and-functional-programming-paradigms
-      - properties-of-an-object
-      - prototype-chain
       - saga-and-thunk
       - uploading-large-files
       - multi-device-web
@@ -107,8 +117,19 @@ tag:
       - positioning-and-floats
     tcp:
       - three-way-handshake-and-four-way-handshake
+    react:
+      - communication-between-components-in-react
+      - lifecycle-methods-of-react-component
+      - react-router
     vue:
+      - communication-between-components-in-vue
       - data-binding-in-vue
+      - lifecycle-hooks-of-vue-component
+      - vue-router
+    react-router:
+      - react-router
+    vue-router:
+      - vue-router
     typescript:
       - type-inference-in-typescript
     design-pattern:
@@ -120,6 +141,15 @@ tag:
       - object-oriented-and-functional-programming-paradigms
     architectural-pattern:
       - model-view-whatever-patterns
+    algorithm:
+      - object-copying
+      - removing-duplicates-from-array
+      - search-algorithms
+      - sorting-algorithms
+    search-algorithm:
+      - search-algorithms
+    sorting-algorithm:
+      - sorting-algorithms
     html:
       - defer-and-async-attributes-of-script-tag
       - multi-device-web
@@ -129,10 +159,16 @@ tag:
     - javascript
     - css
     - performance-optimization
+    - algorithm
+    - vue
     - html
+    - react
     - programming-paradigm
     - design-pattern
-    - tcp
-    - vue
-    - typescript
+    - react-router
+    - vue-router
     - architectural-pattern
+    - tcp
+    - search-algorithm
+    - sorting-algorithm
+    - typescript

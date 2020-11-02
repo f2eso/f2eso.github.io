@@ -19,8 +19,17 @@ architectural-pattern:
 typescript:
   title: TypeScript
 
+react:
+  title: React
+
+react-router:
+  title: React Router
+
 vue:
   title: Vue
+
+vue-router:
+  title: Vue Router
 
 programming-paradigm:
   title: 编程范式
@@ -30,3 +39,12 @@ performance-optimization:
 
 tcp:
   title: TCP
+
+algorithm:
+  title: 算法
+
+sorting-algorithm:
+  title: 排序算法
+
+search-algorithm:
+  title: 查找算法
